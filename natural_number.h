@@ -49,7 +49,7 @@ struct number *natural_scale (struct number*, int);
 struct number *natural_mul (struct number*, struct number *);
 
 struct number *natural_div (struct number*, struct number *);
-struct number *natrual_remain (struct number*, struct number *);
+struct number *natural_remain (struct number*, struct number *);
 
 
 
