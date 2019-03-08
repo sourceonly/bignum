@@ -354,11 +354,7 @@ struct number *natural_remain (struct number * x, struct number *y) {
 
 
 
-
-
-
-
-
+#ifdef NATURAL_TEST
 
 int main() {
   struct number *x,*y;
@@ -438,3 +434,5 @@ int main() {
   }
   */
 }
+
+#endif

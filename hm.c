@@ -390,20 +390,9 @@ int main() {
   write_down(t2);
 
 
-  struct number *a=number_from_long(123456);
-  struct number *b=number_from_long(-123456);
-  write_down(a);
-  write_down(b);
-  struct number *c=number_from_string("123456");
-  struct number *d=number_from_string("-123456");
-  struct number *e=number_from_string("-123a4 5b 6 -");
-
-  write_down(c);
-  write_down(d);
-  write_down(e);
   
-  /* fab calculation */
-  /* 
+  /*fab calculation*/
+  
   struct number *one=init_number();
   append_head(one,1);
   struct number *c=do_scale(one,1);
@@ -417,5 +406,4 @@ int main() {
     printf("fab=");
     write_down(fab);
   }
-  */
 }
