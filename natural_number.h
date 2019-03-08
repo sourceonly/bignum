@@ -1,3 +1,6 @@
+#ifndef NATURAL_NUMBER_H
+#define NATURAL_NUMBER_H 1
+
 #define DIGITAL_LEN_EQ 0
 #define DIGITAL_LEN_LT -1
 #define DIGITAL_LEN_GT 1
@@ -51,3 +54,5 @@ struct number *natrual_remain (struct number*, struct number *);
 
 
 void write_down(struct number *);
+
+#endif

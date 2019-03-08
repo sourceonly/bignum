@@ -163,6 +163,20 @@ int compare_abs(struct number *x, struct number *y) {
   return 0;
 }
 
+int compare_number(struct number *x, struct number *y) {
+  int sx,sy;
+  sx=get_sign(x);
+  sy=get_sign(y);
+  printf("%d,%d\n",sx,sy);
+  if (sx > sy) return DIGITAL_GT;
+  if (sx < sy) return DIGITAL_LT;
+
+  return sx * compare_abs(x,y);
+}
+
+
+
+
 struct number *natural_add (struct number * x, struct number *y) {
   int factx,facty,factr;
   factx=get_sign(x);
@@ -400,7 +414,13 @@ int main() {
   write_down(c);
   write_down(d);
   write_down(e);
-  
+
+
+  printf("%d\n",compare_number(c,e));
+  printf("%d\n",compare_number(e,c));
+  printf("%d\n",compare_number(c,x));
+  write_down(a);
+  write_down(c);
   /* fab calculation */
   /* 
   struct number *one=init_number();
