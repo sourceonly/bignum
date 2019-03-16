@@ -17,7 +17,7 @@
 struct number {
   struct number *next;
   struct number *prev;
-  int digital;
+  char digital;
 };
 
 
@@ -29,11 +29,11 @@ struct number *number_from_long(long );
 struct number *number_from_string(char *);
 
 
-struct number *set_sign(struct number *num, int sign); /* negative one means this number is negative */ 
+struct number *set_sign(struct number *num, char sign); /* negative one means this number is negative */ 
 int get_sign (struct number *num);
 
-struct number *append_tail(struct number *, int);
-struct number *append_head(struct number *, int);
+struct number *append_tail(struct number *, char);
+struct number *append_head(struct number *, char);
 
 int compare_abs (struct number *, struct number *);
 int compare_length (struct number *, struct number *);
@@ -44,7 +44,7 @@ struct number *natural_sub (struct number*, struct number*);
 
 struct number *create_zero(void) ;
 
-struct number *natural_scale (struct number*, int);
+struct number *natural_scale (struct number*, char);
 
 struct number *natural_mul (struct number*, struct number *);
 

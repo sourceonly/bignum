@@ -91,7 +91,7 @@ struct number *number_from_string(char * c) {
 
 
 
-struct number *set_sign(struct number *x, int sign) {
+struct number *set_sign(struct number *x, char sign) {
   x->digital=sign;
   return x;
 }
@@ -102,7 +102,7 @@ int get_sign(struct number *x) {
   return 1;
 }
 
-struct number *append_tail (struct number *num, int x) {
+struct number *append_tail (struct number *num, char x) {
   struct number * newnumber = malloc(sizeof(struct number));
   newnumber->prev=newnumber;
   newnumber->next=newnumber;
@@ -116,7 +116,7 @@ struct number *append_tail (struct number *num, int x) {
   return num;
 }
 
-struct number *append_head (struct number *num, int x) {
+struct number *append_head (struct number *num, char x) {
   struct number *newnumber=append_tail(num->next,x);
   return num;
 }
@@ -245,7 +245,7 @@ struct number *create_zero(void) {
 
 
 
-struct number *natural_scale (struct number* num, int x) {
+struct number *natural_scale (struct number* num, char x) {
   struct number *result, *tmp;
   struct number *zero=create_zero();
   if (x==0) {
