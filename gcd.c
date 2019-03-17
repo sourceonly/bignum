@@ -29,4 +29,6 @@ int main() {
   x2=number_from_string("28");
   gcd=find_gcd(x1,x2);
   write_down(gcd);
+  destroy_number(x1),destroy_number(x2),destroy_number(gcd);
+   
 }

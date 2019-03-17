@@ -9,8 +9,8 @@ int main() {
   frac=natural_add(c,zero);
   
   destroy_number(zero);
-  while(1) {
 
+  while(1) {
     tmp=natural_mul(c,frac);
     destroy_number(frac);
     frac=tmp;
@@ -20,4 +20,8 @@ int main() {
     write_down(c);
     write_down(frac);
   }
+  
+  destroy_number(one);
+  destroy_number(c);
+  destroy_number(frac);
 }

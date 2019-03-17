@@ -260,6 +260,7 @@ struct number *natural_scale (struct number* num, char x) {
   tmp=natural_scale(num,x-1);
   result=natural_add(num,tmp);
   destroy_number(tmp);
+  destroy_number(zero);
   
   return result;
 }
@@ -289,7 +290,7 @@ struct number *natural_mul (struct number* x, struct number * y) {
     append_tail(res,0);
     dx=px->digital;
     tmp_scale=natural_scale(y,dx);
-    tmp=natural_add(res,natural_scale(y,dx));
+    tmp=natural_add(res,tmp_scale);
     destroy_number(tmp_scale);
     destroy_number(res);
     res=tmp;
